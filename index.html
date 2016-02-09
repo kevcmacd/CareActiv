@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	</head>
+	<body>
+		<div data-role="page">
+
+			<div data-role="header">
+				<h1>Log In</h1>
+			</div>
+		
+			<div data-role="main" class="ui-content">
+				<form method="post" action="#page1" id = "form1">
+					<div class="ui-field-contain">
+						<label for="username">User Name:</label>
+						<input id = "username" type="text" name="username" id="username">
+						
+						
+						<label for="pword">Password:</label>
+						<input id = "pword" type="text" name="pword" id="pword">
+
+						
+						<a href="clientsel.html" data-role="button" >Submit</a>
+					</div>
+					
+				</form>
+			</div>
+			<div data-role="footer">
+				<h1>Shane Denzler & Kevin MacDonald</h1>
+			</div>
+		</div>
+		<script src = "script.js"></script>
+		<div data-role="page" id="page2">
+			<div data-role="header">
+				<h1>Welcome To My Homepage</h1>
+			</div>
+			<div data-role="main" class="ui-content">
+				<div id="data">
+					
+				</div>
+			</div>
+			<div data-role="footer">
+				<h1>Footer Text</h1>
+			</div>
+		</div>
+
+	</body>
+</html>

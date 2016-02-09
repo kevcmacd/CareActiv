@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	</head>
+	<body>
+		<div data-role="page">
+
+  <div data-role="header">
+    <h1>Enter Your Activity</h1>
+  </div>
+
+  <div data-role="main" class="ui-content">
+						<label for="adate">Select a Date for the Activity:</label>
+						<input id = "adate" type="date" name="adate" id="adate">
+						<label for="activityType">Type of Activity:</label>
+						<input id = "ActivityType" type="text" name="activityType" id="activityType">
+						<label for="sTime">Start Time:</label>
+						<input id = "sTime" type="text" name="sTime" id="sTime">
+						<label for="eTime">End Time:</label>
+						<input id = "eTime" type="text" name="eTime" id="eTime">
+						<select>
+							<option value="aType">Type of Activity</option>
+							<option value="routine">Routine</option>
+							<option value="apps">Appointments</option>
+						</select>
+					<a href="c1.html" data-role="button" >Submit Activity</a>
+					<a href="c1.html" data-role="button" >Back</a>
+					<a href="index.html" data-role="button" >Log Out</a>
+	<div id = "div1"></div>
+  </div>
+
+	</body>
+</html>
