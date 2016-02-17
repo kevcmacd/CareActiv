@@ -7,5 +7,7 @@ Care Activity App
 
 3) Once the wamp icon is green you can unzip the program's folder into the www directory inside of the wamp folder.
 
-4) Once it is unzipped into the www folder and the wamp icon is green you can go to your internet browser (Tested only on Google Chrome browser.) and go to the address localhost/WHI/index.html (Keep in mind that this only works if you dont change any of the folder names. If you do you need to make the same changes in the address name.)
+4) Install MySQL Workbench from http://dev.mysql.com/downloads/workbench/ and run the mysql_db_script.sql script and start the mySQL server. It should display that it is running and everything is ok.
+
+5) Once it is unzipped into the www folder and the wamp icon is green you can go to your internet browser (Tested only on Google Chrome browser.) and go to the address localhost/WHI/index.html (Keep in mind that this only works if you dont change any of the folder names. If you do you need to make the same changes in the address name.)
 
