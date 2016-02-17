@@ -11,8 +11,13 @@
 
 			<div data-role="header">
 				<h1>Log In</h1>
+				<div class="ui-field-contain" align="right">
+							<a href="#" class="ui-btn ui-btn-inline">Sign up</a>
+							<a href="#" class="ui-btn ui-btn-inline">Forgot password?</a>
+						</div>
 			</div>
-		
+			<div id="logo" align="center"> <img src="images/logo.png" alt="Logo" style="width:300px;height:300px;">
+			</div>
 			<div data-role="main" class="ui-content">
 				<form method="post" action="#page1" id = "form1">
 					<div class="ui-field-contain">
@@ -21,10 +26,9 @@
 						
 						
 						<label for="pword">Password:</label>
-						<input id = "pword" type="text" name="pword" id="pword">
-
+						<input id = "pword" type="password" name="pword" id="pword">
+						<a href="clientsel.html" data-role="button" align="right">Submit</a>
 						
-						<a href="clientsel.html" data-role="button" >Submit</a>
 					</div>
 					
 				</form>
