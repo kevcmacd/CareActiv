@@ -12,12 +12,24 @@
   <body>
     <div data-role="page">
       <div data-role="header" data-position="inline">
-      <h1>Select a Client</h1>
+      <h1>New Activity</h1>
       <a href="javascript:history.back()" class="ui-btn-left">Back</a> 
       <a href="#" class="ui-btn-right">Log Out</a></div>
       <div data-role="main" class="ui-content">
-      <a href="client.html" data-role="button">Client One</a> 
-      <a href="newclient.html" data-role="button">Add A Client</a>
+      <label for="adate">Select a Date for the Activity:</label> 
+      <input type="date" name="adate" id="adate" /> 
+      <label for="activityType">Type of Activity:</label> 
+      <input type="text" name="activityType" id="activityType" /> 
+      <label for="sTime">Start Time:</label> 
+      <input type="text" name="sTime" id="sTime" /> 
+      <label for="eTime">End Time:</label> 
+      <input type="text" name="eTime" id="eTime" /> 
+      <select>
+        <option value="aType">Type of Activity</option>
+        <option value="routine">Routine</option>
+        <option value="apps">Appointments</option>
+      </select> 
+      <a href="client.html" data-role="button">Submit Activity</a>
       <div data-role="footer">
         <h1>Shane Denzler &amp; Kevin MacDonald</h1>
       </div></div>
