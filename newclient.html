@@ -14,23 +14,37 @@
       <div data-role="header" data-position="inline">
       <h1>New Client</h1>
       <a href="javascript:history.back()" class="ui-btn-left">Back</a> 
-      <a href="#" class="ui-btn-right">Log Out</a></div>
+      <a href="index.html" class="ui-btn-right">Log Out</a></div>
       <div data-role="main" class="ui-content">
         <div id="dat">
-        <label for="cName">Client&#39;s Name:</label> 
-        <input type="text" name="cName" id="cName" /> 
-        <label for="dob">Date of Birth:</label> 
-        <input type="date" name="dob" id="dob" /> 
-        <label for="sex">Client&#39;s Sex:</label> 
-        <input type="text" name="sex" id="sex" /> 
-        <label for="cLoc">Client&#39;s Location:</label> 
-        <input type="text" name="cLoc" id="cLoc" /> 
-        <label for="cType">Type of Care Needed:</label> 
-        <input type="text" name="cType" id="cType" /> 
-        <a href="clientsel.html" data-role="button">Add New Client</a></div>
-      </div>
-      <div data-role="footer">
-        <h1>Shane Denzler &amp; Kevin MacDonald</h1>
+          <div class="ui-grid-a">
+            <div class="ui-block-a">
+            <label for="fName">First name:</label> 
+            <input type="text" name="fName" id="fName" /> 
+            <label for="lName">Last name:</label> 
+            <input type="text" name="lName" id="lName" /> 
+            <label for="cName">Date of Birth:</label> 
+            <input type="date" name="dob" id="dob" /> 
+            <label for="sex">Sex:</label> 
+            <input type="text" name="sex" id="sex" /> 
+            <label for="loc">Location:</label> 
+            <input type="text" name="loc" id="loc" /> 
+            <label for="toc">Type of Care:</label> 
+            <input type="text" name="toc" id="toc" /></div>
+            <div class="ui-block-b">
+            <label for="allg">Allergies:</label> 
+            <input type="text" name="allg" id="allg" /> 
+            <label for="cond">Conditions:</label> 
+            <input type="text" name="cond" id="cond" /> 
+            <label for="pcp">Primary Care Physician:</label> 
+            <input type="text" name="pcp" id="pcp" /> 
+            <label for="emc">Emergency Contact:</label> 
+            <input type="text" name="emc" id="emc" /> 
+            <label for="emp">Emergency Phone:</label> 
+            <input type="text" name="emp" id="emp" /></div>
+          </div>
+          <a href="clientsel.html" data-role="button">Submit</a>
+        </div>
       </div>
     </div>
   </body>

@@ -12,27 +12,46 @@
   <body>
     <div data-role="page">
       <div data-role="header" data-position="inline">
-      <h1>New Activity</h1>
+      <h1>Activity</h1>
       <a href="javascript:history.back()" class="ui-btn-left">Back</a> 
-      <a href="#" class="ui-btn-right">Log Out</a></div>
+      <a href="index.html" class="ui-btn-right">Log Out</a></div>
       <div data-role="main" class="ui-content">
-      <label for="adate">Select a Date for the Activity:</label> 
-      <input type="date" name="adate" id="adate" /> 
-      <label for="activityType">Type of Activity:</label> 
-      <input type="text" name="activityType" id="activityType" /> 
-      <label for="sTime">Start Time:</label> 
-      <input type="text" name="sTime" id="sTime" /> 
-      <label for="eTime">End Time:</label> 
-      <input type="text" name="eTime" id="eTime" /> 
-      <select>
-        <option value="aType">Type of Activity</option>
-        <option value="routine">Routine</option>
-        <option value="apps">Appointments</option>
-      </select> 
-      <a href="client.html" data-role="button">Submit Activity</a>
-      <div data-role="footer">
-        <h1>Shane Denzler &amp; Kevin MacDonald</h1>
-      </div></div>
+        <div id="dat">
+          <div class="ui-grid-a">
+            <div class="ui-block-a">
+            <label for="aDate">Date:</label> 
+            <input type="date" name="aDate" id="aDate" /> 
+            <label for="lDesc">Description:</label> 
+            <input type="text" name="lDesc" id="lDesc" /> 
+            <label for="sDate">Start Time:</label> 
+            <input type="datetime" name="sDate" id="sDate" /> 
+            <label for="eDate">End Time:</label> 
+            <input type="datetime" name="eDate" id="eDate" /> 
+            <label for="lCare">Special Care:</label> 
+            <input type="text" name="lCare" id="lCare" /></div>
+            <div class="ui-block-b">
+            <label for="lIns">Instructions:</label> 
+            <input type="text" name="lIns" id="lIns" /> 
+            <label for="lRep">Repeating:</label> 
+            <select>
+              <option value="0">No</option>
+              <option value="1">Yes</option>
+            </select> 
+            <label for="dRep">Repeating Until:</label> 
+            <input type="datetime" name="dRep" id="dRep" /> 
+            <label for="lMed">Medication Interval:</label> 
+            <input type="text" name="lMed" id="lMed" /> 
+            <label for="lType">Type:</label> 
+            <select>
+              <option value="0">Select Type</option>
+              <option value="1">Routine</option>
+              <option value="2">Appointments</option>
+              <option value="3">Medication</option>
+            </select></div>
+          </div>
+          <a href="client.html" data-role="button">Save</a>
+        </div>
+      </div>
     </div>
   </body>
 </html>
