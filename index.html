@@ -3,17 +3,18 @@
   <head>
     <meta name="generator"
     content="HTML Tidy for HTML5 (experimental) for Windows https://github.com/w3c/tidy-html5/tree/c63cc39" />
-    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.css" />
+	<link rel="stylesheet" href="http://demos.jquerymobile.com/1.4.0/theme-classic/theme-classic.css" />
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script type="text/javascript" src="javascript/init.js"></script>
     <title></title>
   </head>
   <body>
-    <div data-role="page">
-      <div data-role="header" data-position="inline">
+    <div data-role="page" data-theme="b">
+      <div data-role="header" data-position="inline" >
         <h1>CareActiv Alpha</h1>
-        <a href="newuser.html" class="ui-btn-right">Sign up</a>
+        <a href="newuser.html" class="ui-btn-right" >Sign up</a>
       </div>
       <div id="logo" align="center">
         <br />
@@ -22,13 +23,15 @@
       <div data-role="main" class="ui-content">
         <form method="post" action="#page1" id="form1">
           <div class="ui-field-contain" align="center">
-          <label for="username">Username:</label> 
-          <input type="text" name="username" id="username" /> 
-          <label for="pword">Password:</label> 
-          <input type="password" name="pword" id="pword" /></div>
+			<label for="username">Username:</label> 
+			<input type="text" name="username" id="username" /> 
+			<label for="pword">Password:</label> 
+			<input type="password" name="pword" id="pword" />
+		  </div>
           <div class="ui-field-contain" align="center">
-          <a href="clientsel.html" data-role="button" data-inline="true">Log In</a> 
-          <a href="forgotpass.html" data-role="button" data-inline="true">Forgot Password?</a></div>
+			<a href="clientsel.html" data-role="button" data-inline="true">Log In</a> 
+			<a href="forgotpass.html" data-role="button" data-inline="true">Forgot Password?</a>
+		  </div>
         </form>
       </div>
       <div id="myDiv">No connection</div>
