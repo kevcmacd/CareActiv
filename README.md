@@ -1,4 +1,4 @@
-# CareActiv Patient Care Management Application
+# Patient Care Management Application
 
 - Start by installing WampServer from http://www.wampserver.com/en/
 
