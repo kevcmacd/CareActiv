@@ -1,5 +1,4 @@
-# Web-Health-Informatics
-Care Activity App
+# CareActiv Patient Care Management Application
 
 - Start by installing WampServer from http://www.wampserver.com/en/
 
