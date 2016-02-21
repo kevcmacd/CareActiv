@@ -8,7 +8,7 @@
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script type="text/javascript" src="javascript/init.js"></script>
-    <title></title>
+    <title>CareActiv</title>
   </head>
   <body>
     <div data-role="page" data-theme="b">
@@ -22,14 +22,16 @@
       </div>
       <div data-role="main" class="ui-content">
         <form method="post" action="#page1" id="form1">
+		<div id="login"></div>
           <div class="ui-field-contain" align="center">
 			<label for="username">Username:</label> 
-			<input type="text" name="username" id="username" /> 
+			<input type="text" name="username" id="username"/> 
 			<label for="pword">Password:</label> 
-			<input type="password" name="pword" id="pword" />
+			<input type="password" name="pword" id="pword"/>
 		  </div>
           <div class="ui-field-contain" align="center">
-			<a href="clientsel.html" data-role="button" data-inline="true">Log In</a> 
+			<!-- <button onclick="login()" data-role="button" data-inline="true">Log In</button> -->
+			<a href="clientsel.html" data-role="button" data-inline="true">Log In</a>
 			<a href="forgotpass.html" data-role="button" data-inline="true">Forgot Password?</a>
 		  </div>
         </form>
