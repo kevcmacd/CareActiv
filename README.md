@@ -11,3 +11,7 @@
 
 - Once it is unzipped into the www folder and the wamp icon is green you can go to your internet browser (Tested only on Google Chrome browser.) and go to the address localhost/WHI/index.html (Keep in mind that this only works if you dont change any of the folder names. If you do you need to make the same changes in the address name.)
 
+Useful tutorials: 
+
+http://tutorialzine.com/2011/08/jquery-mobile-product-website/ 
+http://www.html-form-guide.com/php-form/php-login-form.html
