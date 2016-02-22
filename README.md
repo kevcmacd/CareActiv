@@ -16,3 +16,5 @@ Useful tutorials:
 http://tutorialzine.com/2011/08/jquery-mobile-product-website/ 
 
 http://www.html-form-guide.com/php-form/php-login-form.html
+
+http://www.phpnerds.com/article/using-cookies-in-php/2
