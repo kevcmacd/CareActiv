@@ -80,6 +80,6 @@ function insertRoutine()
 	xmlhttp.open("GET","php/insertroutine.php?id=" + id + "&sDate=" + sDate + "&tDesc=" + tDesc + "&sTime=" + sTime + "&tCare=" + tCare + "&tIns=" + tIns + "&rDate=" + rDate + "&eTime=" + eTime,true);
 	xmlhttp.send();
 	
-	//window.location.href = "routines.html";
+	window.location.href = "routines.html";
 	
 }

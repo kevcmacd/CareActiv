@@ -18,6 +18,6 @@ window.onload = function getRoutines()
 			document.getElementById("activityList").innerHTML=xmlhttp.responseText;
 		}
 	}
-	xmlhttp.open("GET","php/getroutines.php?id=" + id,true);
+	xmlhttp.open("GET","php/getroutines.php?id=" + patient_id,true);
 	xmlhttp.send();
 }

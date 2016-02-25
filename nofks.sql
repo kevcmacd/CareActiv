@@ -111,7 +111,6 @@ CREATE TABLE IF NOT EXISTS `care_activity_mgr`.`users` (
   `lastn` VARCHAR(45) NULL DEFAULT NULL,
   `password_reminder` VARCHAR(45) NULL DEFAULT NULL,
   `password_answer` VARCHAR(45) NULL DEFAULT NULL,
-  `clients_id` INT(11) UNSIGNED NOT NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_User` (`id` ASC))
 ENGINE = InnoDB
