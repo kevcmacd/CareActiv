@@ -22,7 +22,7 @@ USE `care_activity_mgr` ;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `care_activity_mgr`.`appointments` (
   `id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `date` DATE NOT NULL,
+  `adate` DATE NOT NULL,
   `start_time` VARCHAR(10) NOT NULL,
   `end_time` VARCHAR(10) NOT NULL,
   `location` VARCHAR(45) NOT NULL,
@@ -40,8 +40,8 @@ DEFAULT CHARACTER SET = latin1;
 CREATE TABLE IF NOT EXISTS `care_activity_mgr`.`clients` (
   `id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
   `userid` INT(11) UNSIGNED NOT NULL,
-  `first` VARCHAR(45) NULL DEFAULT NULL,
-  `last` VARCHAR(45) NULL DEFAULT NULL,
+  `firstn` VARCHAR(45) NULL DEFAULT NULL,
+  `lastn` VARCHAR(45) NULL DEFAULT NULL,
   `dob` DATE NULL DEFAULT NULL,
   `sex` VARCHAR(45) NULL DEFAULT NULL,
   `location` VARCHAR(45) NULL DEFAULT NULL,
@@ -65,13 +65,13 @@ DEFAULT CHARACTER SET = latin1;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `care_activity_mgr`.`medication` (
   `id` INT(11) UNSIGNED NOT NULL,
-  `date` DATE NOT NULL,
+  `adate` DATE NOT NULL,
   `description` VARCHAR(140) NULL DEFAULT NULL,
   `start_time` VARCHAR(10) NOT NULL,
   `end_time` VARCHAR(10) NOT NULL,
   `special_care` VARCHAR(140) NULL DEFAULT NULL,
   `instructions` VARCHAR(140) NULL DEFAULT NULL,
-  `repeat_until` DATE NOT NULL,
+  `repeating_until` DATE NOT NULL,
   `medication_interval` VARCHAR(45) NOT NULL,
   `repeating` INT(11) NULL DEFAULT NULL,
   `patient_id` INT(11) UNSIGNED NOT NULL,
@@ -86,13 +86,13 @@ DEFAULT CHARACTER SET = latin1;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `care_activity_mgr`.`routines` (
   `id` INT(11) UNSIGNED NOT NULL,
-  `date` DATE NOT NULL,
+  `adate` DATE NOT NULL,
   `description` VARCHAR(140) NULL DEFAULT NULL,
   `start_time` VARCHAR(10) NOT NULL,
   `end_time` VARCHAR(10) NOT NULL,
   `special_care` VARCHAR(140) NULL DEFAULT NULL,
   `instructions` VARCHAR(140) NULL DEFAULT NULL,
-  `repeat` VARCHAR(140) NULL DEFAULT NULL,
+  `repeating` VARCHAR(140) NULL DEFAULT NULL,
   `patient_id` INT(11) UNSIGNED NOT NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_routines` (`patient_id` ASC))
@@ -107,8 +107,8 @@ CREATE TABLE IF NOT EXISTS `care_activity_mgr`.`users` (
   `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
   `username` VARCHAR(45) NOT NULL,
   `password` VARCHAR(45) NOT NULL,
-  `first` VARCHAR(45) NULL DEFAULT NULL,
-  `last` VARCHAR(45) NULL DEFAULT NULL,
+  `firstn` VARCHAR(45) NULL DEFAULT NULL,
+  `lastn` VARCHAR(45) NULL DEFAULT NULL,
   `password_reminder` VARCHAR(45) NULL DEFAULT NULL,
   `password_answer` VARCHAR(45) NULL DEFAULT NULL,
   `clients_id` INT(11) UNSIGNED NOT NULL,
