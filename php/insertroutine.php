@@ -20,7 +20,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-$sql = "INSERT INTO routines (patient_id, start_date, description, start_time, end_time, special_care, instructions, repeat_until)
+$sql = "INSERT INTO routines (patient_id, date, description, start_time, end_time, special_care, instructions, repeat)
 VALUES ('" . $id . "','" . $sDate . "', '" . $tDesc . "','" . $sTime . "','" . $eTime . "','" . $tCare . "','" . $tIns . "','" . $rDate . "')";
 
 if ($conn->query($sql) === TRUE) {
