@@ -1,6 +1,6 @@
 window.onload = function getRoutines()
 {
-	var id = 0;
+	var patient_id = 2000;
 	
 	var xmlhttp;
 	if (window.XMLHttpRequest)

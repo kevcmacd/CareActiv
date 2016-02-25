@@ -18,7 +18,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-$sql = "INSERT INTO users (username, password, first, last, password_reminder, password_answer)
+$sql = "INSERT INTO users (username, password, firstn, lastn, password_reminder, password_answer)
 VALUES ('" . $uName . "','" . $pass . "', '" . $fName . "','" . $lName . "','" . $squest . "','" . $sans . "')";
 
 if ($conn->query($sql) === TRUE) {
