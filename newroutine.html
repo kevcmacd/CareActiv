@@ -24,26 +24,25 @@
         <div id="dat">
           <div class="ui-grid-a">
             <div class="ui-block-a">
-            <label for="aDate">Date:</label> 
-            <input type="date" name="aDate" id="aDate" /> 
+            <label for="sDate">Date:</label> 
+            <input type="date" name="sDate" id="sDate" /> 
             <label for="lDesc">Description:</label> 
-            <input type="text" name="lDesc" id="lDesc" /> 
-            <label for="sDate">Start Time:</label> 
-            <input type="time" name="sDate" id="sDate" /> 
- 
+            <input type="text" name="tDesc" id="tDesc" /> 
+            <label for="sTime">Start Time:</label> 
+            <input type="time" name="sTime" id="sTime" /> 
             <label for="lCare">Special Care:</label> 
-            <input type="text" name="lCare" id="lCare" /></div>
+            <input type="text" name="tCare" id="tCare" /></div>
             <div class="ui-block-b">
             <label for="lIns">Instructions:</label> 
-            <input type="text" name="lIns" id="lIns" /> 
-            
+            <input type="text" name="tIns" id="tIns" /> 
             <label for="dRep">Repeating Until:</label> 
-            <input type="datetime" name="dRep" id="dRep" /> 
-                        <label for="eDate">End Time:</label> 
-            <input type="time" name="eDate" id="eDate" />
+            <input type="date" name="rDate" id="rDate" /> 
+            <label for="eTime">End Time:</label> 
+            <input type="time" name="eTime" id="eTime" />
             </div>
           </div>
-          <a href="routines.html" data-role="button">Save</a>
+		  <div id="userDiv"></div>
+          <button data-role="button" onclick="insertRoutine()">Save</button>
         </div>
       </div>
     </div>

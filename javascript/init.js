@@ -49,3 +49,61 @@ function createUser()
 	xmlhttp.send();
 	
 }
+
+function insertRoutine()
+{
+	var sDate = document.getElementById("sDate").value;
+	var tDesc = document.getElementById("tDesc").value;
+	var sTime = document.getElementById("sTime").value;
+	var tCare = document.getElementById("tCare").value;
+	var tIns = document.getElementById("tIns").value;
+	var rDate = document.getElementById("rDate").value;
+	var eTime = document.getElementById("eTime").value;
+	var id = 2000;
+	
+	var xmlhttp;
+	if (window.XMLHttpRequest)
+	{// code for IE7+, Firefox, Chrome, Opera, Safari
+	xmlhttp=new XMLHttpRequest();
+	}
+	else
+	{// code for IE6, IE5
+	xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	xmlhttp.onreadystatechange=function()
+	{
+	if (xmlhttp.readyState==4 && xmlhttp.status==200)
+		{
+			document.getElementById("userDiv").innerHTML=xmlhttp.responseText;
+		}
+	}
+	xmlhttp.open("GET","php/insertroutine.php?id=" + id + "&sDate=" + sDate + "&tDesc=" + tDesc + "&sTime=" + sTime + "&tCare=" + tCare + "&tIns=" + tIns + "&rDate=" + rDate + "&eTime=" + eTime,true);
+	xmlhttp.send();
+	
+	window.location.href = "routines.html";
+	
+}
+
+function getRoutines()
+{
+	var id = 0;
+	
+	var xmlhttp;
+	if (window.XMLHttpRequest)
+	{// code for IE7+, Firefox, Chrome, Opera, Safari
+	xmlhttp=new XMLHttpRequest();
+	}
+	else
+	{// code for IE6, IE5
+	xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	xmlhttp.onreadystatechange=function()
+	{
+	if (xmlhttp.readyState==4 && xmlhttp.status==200)
+		{
+			document.getElementById("activityList").innerHTML=xmlhttp.responseText;
+		}
+	}
+	xmlhttp.open("GET","php/getroutines.php?id=" + id,true);
+	xmlhttp.send();
+}
