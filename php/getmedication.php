@@ -13,7 +13,7 @@
 		die("Connection failed: " . $conn->connect_error);
 	} 
    
-   $sql = 'SELECT * from routines WHERE patient_id=' . $id;
+   $sql = 'SELECT * from medication WHERE patient_id=' . $id;
    
    $result = $conn->query($sql);
 
@@ -27,11 +27,12 @@
 		. $row["start_time"]. " " 
 		. $row["end_time"]. " " 
 		. $row["special_care"]. " " 
-		. $row["instructions"].  " " 
+		. $row["instructions"].  " "
+		. $row["medication_interval"].  " "
 		. $row["repeating"]. "<button data-role=\"button\" data-icon=\"delete\" data-inline=\"true\" data-mini=\"true\">Delete</button></div><br>";
     }
 	} else {
-		echo "0 routines";
+		echo "0 medication routines";
 	}
    $conn->close();
 ?>

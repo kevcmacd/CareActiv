@@ -13,7 +13,7 @@
 		die("Connection failed: " . $conn->connect_error);
 	} 
    
-   $sql = 'SELECT * from routines WHERE patient_id=' . $id;
+   $sql = 'SELECT * from appointments WHERE patient_id=' . $id;
    
    $result = $conn->query($sql);
 
@@ -26,12 +26,10 @@
 		. $row["description"]. " " 
 		. $row["start_time"]. " " 
 		. $row["end_time"]. " " 
-		. $row["special_care"]. " " 
-		. $row["instructions"].  " " 
-		. $row["repeating"]. "<button data-role=\"button\" data-icon=\"delete\" data-inline=\"true\" data-mini=\"true\">Delete</button></div><br>";
+		. $row["location"]. "<button data-role=\"button\" data-icon=\"delete\" data-inline=\"true\" data-mini=\"true\">Delete</button></div><br>";
     }
 	} else {
-		echo "0 routines";
+		echo "0 appointments";
 	}
    $conn->close();
 ?>

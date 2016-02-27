@@ -1,6 +1,6 @@
-window.onload = function getRoutines()
+window.onload = function getClients()
 {
-	var patient_id = 2000;
+	var id = 2000;
 	
 	var xmlhttp;
 	if (window.XMLHttpRequest)
@@ -15,9 +15,9 @@ window.onload = function getRoutines()
 	{
 	if (xmlhttp.readyState==4 && xmlhttp.status==200)
 		{
-			document.getElementById("routineList").innerHTML=xmlhttp.responseText;
+			document.getElementById("clientList").innerHTML=xmlhttp.responseText;
 		}
 	}
-	xmlhttp.open("GET","php/getroutines.php?id=" + patient_id,true);
+	xmlhttp.open("GET","php/getclients.php?id=" + id,true);
 	xmlhttp.send();
 }

@@ -20,7 +20,7 @@ function checkmyconnect()
 	xmlhttp.send();
 }
 
-function createUser()
+function insertUser()
 {
 	var fName = document.getElementById("fName").value;
 	var lName = document.getElementById("lName").value;
@@ -45,7 +45,12 @@ function createUser()
 			document.getElementById("userDiv").innerHTML=xmlhttp.responseText;
 		}
 	}
-	xmlhttp.open("GET","php/insertuser.php?fName=" + fName + "&lName=" + lName + "&uName=" + uName + "&pass=" + pass + "&squest=" + squest + "&sans=" + sans,true);
+	xmlhttp.open("GET","php/insertuser.php?fName=" + fName
+										+ "&lName=" + lName
+										+ "&uName=" + uName
+										+ "&pass=" + pass
+										+ "&squest=" + squest
+										+ "&sans=" + sans,true);
 	xmlhttp.send();
 	
 }
@@ -77,7 +82,14 @@ function insertRoutine()
 			document.getElementById("userDiv").innerHTML=xmlhttp.responseText;
 		}
 	}
-	xmlhttp.open("GET","php/insertroutine.php?id=" + id + "&sDate=" + sDate + "&tDesc=" + tDesc + "&sTime=" + sTime + "&tCare=" + tCare + "&tIns=" + tIns + "&rDate=" + rDate + "&eTime=" + eTime,true);
+	xmlhttp.open("GET","php/insertroutine.php?id=" + id
+										+ "&sDate=" + sDate
+										+ "&tDesc=" + tDesc
+										+ "&sTime=" + sTime
+										+ "&tCare=" + tCare
+										+ "&tIns=" + tIns
+										+ "&rDate=" + rDate
+										+ "&eTime=" + eTime,true);
 	xmlhttp.send();
 	
 	window.location.href = "routines.html";

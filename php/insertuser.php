@@ -19,7 +19,12 @@ if ($conn->connect_error) {
 } 
 
 $sql = "INSERT INTO users (username, password, firstn, lastn, password_reminder, password_answer)
-VALUES ('" . $uName . "','" . $pass . "', '" . $fName . "','" . $lName . "','" . $squest . "','" . $sans . "')";
+VALUES ('" . $uName . "','" 
+		. $pass . "', '" 
+		. $fName . "','" 
+		. $lName . "','" 
+		. $squest . "','" 
+		. $sans . "')";
 
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
