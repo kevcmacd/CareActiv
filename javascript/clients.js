@@ -1,6 +1,6 @@
 window.onload = function getClients()
 {
-	var id = 2000;
+	var id = 5;
 	
 	var xmlhttp;
 	if (window.XMLHttpRequest)
@@ -15,7 +15,7 @@ window.onload = function getClients()
 	{
 	if (xmlhttp.readyState==4 && xmlhttp.status==200)
 		{
-			document.getElementById("clientList").innerHTML=xmlhttp.responseText;
+			document.getElementById("cList").innerHTML=xmlhttp.responseText;
 		}
 	}
 	xmlhttp.open("GET","php/getclients.php?id=" + id,true);
