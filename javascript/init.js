@@ -68,7 +68,7 @@ function insertClient()
 	var pcp = document.getElementById("pcp").value;
 	var emc = document.getElementById("emc").value;
 	var emp = document.getElementById("emp").value;
-	var id = 2000;
+	var id = 5;
 	
 	var xmlhttp;
 	if (window.XMLHttpRequest)

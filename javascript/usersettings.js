@@ -1,6 +1,6 @@
 window.onload = function getUserSettings()
 {
-	var id = 2000;
+	var id = 5;
 	
 	var xmlhttp;
 	if (window.XMLHttpRequest)
