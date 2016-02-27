@@ -51,9 +51,6 @@ CREATE TABLE IF NOT EXISTS `care_activity_mgr`.`clients` (
   `doctor` VARCHAR(45) NULL DEFAULT NULL,
   `emergency_contact` VARCHAR(45) NULL DEFAULT NULL,
   `emergency_phone` VARCHAR(45) NULL DEFAULT NULL,
-  `appointments_id` INT(11) UNSIGNED NOT NULL,
-  `routines_id` INT(11) UNSIGNED NOT NULL,
-  `medication_id` INT(11) UNSIGNED NOT NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_care_provider_idx` (`userid` ASC))
 ENGINE = InnoDB

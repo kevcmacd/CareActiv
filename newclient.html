@@ -28,7 +28,7 @@
             <input type="text" name="fName" id="fName" /> 
             <label for="lName">Last name:</label> 
             <input type="text" name="lName" id="lName" /> 
-            <label for="cName">Date of Birth:</label> 
+            <label for="dob">Date of Birth:</label> 
             <input type="date" name="dob" id="dob" /> 
             <label for="sex">Sex:</label> 
             <input type="text" name="sex" id="sex" /> 
@@ -48,7 +48,8 @@
             <label for="emp">Emergency Phone:</label> 
             <input type="text" name="emp" id="emp" /></div>
           </div>
-          <a href="clientsel.html" data-role="button">Submit</a>
+		  <div id="clientDiv"></div>
+          <button data-role="button" onclick="insertClient()">Submit</button>
         </div>
       </div>
     </div>

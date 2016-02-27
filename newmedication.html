@@ -4,7 +4,7 @@
     <meta name="generator"
     content="HTML Tidy for HTML5 (experimental) for Windows https://github.com/w3c/tidy-html5/tree/c63cc39" />
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.css" />
-	<link rel="stylesheet" href="http://demos.jquerymobile.com/1.4.0/theme-classic/theme-classic.css" />
+    <link rel="stylesheet" href="http://demos.jquerymobile.com/1.4.0/theme-classic/theme-classic.css" />
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script type="text/javascript" src="javascript/init.js"></script>
@@ -16,9 +16,9 @@
       <h1>New Medication</h1>
       <a href="javascript:history.back()" class="ui-btn ui-icon-arrow-l ui-btn-icon-left">Back</a> 
       <a href="index.html" class="ui-btn-right">Log Out</a></div>
-	  <div id="logo" align="center">
+      <div id="logo" align="center">
         <br />
-        <img src="images/newactivity.png" alt="Activities" style="width:100px;height:100px;"/>
+        <img src="images/newactivity.png" alt="Activities" style="width:100px;height:100px;" />
       </div>
       <div data-role="main" class="ui-content">
         <div id="dat">
@@ -28,10 +28,10 @@
             <input type="date" name="aDate" id="aDate" /> 
             <label for="lDesc">Description:</label> 
             <input type="text" name="lDesc" id="lDesc" /> 
-            <label for="sDate">Start Time:</label> 
-            <input type="time" name="sDate" id="sDate" /> 
-            <label for="eDate">End Time:</label> 
-            <input type="time" name="eDate" id="eDate" /> 
+            <label for="sTime">Start Time:</label> 
+            <input type="time" name="sTime" id="sTime" /> 
+            <label for="eTime">End Time:</label> 
+            <input type="time" name="eTime" id="eTime" /> 
             <label for="lCare">Special Care:</label> 
             <input type="text" name="lCare" id="lCare" /></div>
             <div class="ui-block-b">
@@ -45,11 +45,10 @@
             <label for="dRep">Repeating Until:</label> 
             <input type="datetime" name="dRep" id="dRep" /> 
             <label for="lMed">Medication Interval:</label> 
-            <input type="text" name="lMed" id="lMed" /> 
-           
-            </div>
+            <input type="text" name="lMed" id="lMed" /></div>
           </div>
-          <a href="client.html" data-role="button">Save</a>
+		  <div id="medDiv"></div>
+          <button data-role="button" onclick="insertMedication()">Save</button>
         </div>
       </div>
     </div>
