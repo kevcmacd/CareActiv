@@ -10,11 +10,3 @@
 - Install MySQL Workbench from http://dev.mysql.com/downloads/workbench/ and run the mysql_db_script.sql script and start the mySQL server. It should display that it is running and everything is ok.
 
 - Once it is unzipped into the www folder and the wamp icon is green you can go to your internet browser (Tested only on Google Chrome browser.) and go to the address localhost/WHI/index.html (Keep in mind that this only works if you dont change any of the folder names. If you do you need to make the same changes in the address name.)
-
-Useful tutorials: 
-
-http://tutorialzine.com/2011/08/jquery-mobile-product-website/ 
-
-http://www.html-form-guide.com/php-form/php-login-form.html
-
-http://www.phpnerds.com/article/using-cookies-in-php/2
