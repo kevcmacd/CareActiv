@@ -100,7 +100,7 @@ function insertClient()
 										+ "&id=" + id,true);
 	xmlhttp.send();
 	
-	window.location.href = "clientsel.html";
+	//window.location.href = "clientsel.html";
 }
 
 function insertRoutine()
@@ -140,7 +140,7 @@ function insertRoutine()
 										+ "&eTime=" + eTime,true);
 	xmlhttp.send();
 	
-	window.location.href = "routines.html";
+	//window.location.href = "routines.html";
 	
 }
 
@@ -177,7 +177,7 @@ function insertAppointment()
 										+ "&eTime=" + eTime,true);
 	xmlhttp.send();
 	
-	window.location.href = "appointments.html";
+	//window.location.href = "appointments.html";
 	
 }
 
@@ -222,6 +222,6 @@ function insertMedication()
 										+ "&lMed=" + lMed,true);
 	xmlhttp.send();
 	
-	window.location.href = "medication.html";
+	//window.location.href = "medication.html";
 	
 }
