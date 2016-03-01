@@ -8,7 +8,7 @@ window.onload = function getActivities()
 
 function getAppointments()
 {
-	var patient_id = 2000;
+	var patient_id = 1;
 	
 	var xmlhttp;
 	if (window.XMLHttpRequest)
@@ -32,7 +32,7 @@ function getAppointments()
 
 function getMedication()
 {
-	var patient_id = 2000;
+	var patient_id = 1;
 	
 	var xmlhttp;
 	if (window.XMLHttpRequest)
@@ -56,7 +56,7 @@ function getMedication()
 
 function getRoutines()
 {
-	var patient_id = 2000;
+	var patient_id = 1;
 	
 	var xmlhttp;
 	if (window.XMLHttpRequest)

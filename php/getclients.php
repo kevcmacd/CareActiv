@@ -22,8 +22,8 @@
     while($row = $result->fetch_assoc()) {
         echo "<a href=\"client.html?id=" 
 		. $row["id"]. "\" data-role=\"button\">" 
-		. $row["fName"]. " " 
-		. $row["lName"]. "</a><br>";
+		. $row["firstn"]. " " 
+		. $row["lastn"]. "</a><br>";
     }
 	} else {
 		echo "0 clients";

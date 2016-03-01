@@ -26,11 +26,12 @@ CREATE TABLE IF NOT EXISTS `care_activity_mgr`.`appointments` (
   `start_time` VARCHAR(10) NOT NULL,
   `end_time` VARCHAR(10) NOT NULL,
   `location` VARCHAR(45) NOT NULL,
-  `descripton` VARCHAR(140) NULL DEFAULT NULL,
   `patient_id` INT(11) UNSIGNED NOT NULL,
+  `description` VARCHAR(140) NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_apps` (`patient_id` ASC))
 ENGINE = InnoDB
+AUTO_INCREMENT = 2
 DEFAULT CHARACTER SET = latin1;
 
 
@@ -54,6 +55,7 @@ CREATE TABLE IF NOT EXISTS `care_activity_mgr`.`clients` (
   PRIMARY KEY (`id`),
   INDEX `fk_care_provider_idx` (`userid` ASC))
 ENGINE = InnoDB
+AUTO_INCREMENT = 2
 DEFAULT CHARACTER SET = latin1;
 
 
@@ -61,7 +63,7 @@ DEFAULT CHARACTER SET = latin1;
 -- Table `care_activity_mgr`.`medication`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `care_activity_mgr`.`medication` (
-  `id` INT(11) UNSIGNED NOT NULL,
+  `id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
   `adate` DATE NOT NULL,
   `description` VARCHAR(140) NULL DEFAULT NULL,
   `start_time` VARCHAR(10) NOT NULL,
@@ -75,6 +77,7 @@ CREATE TABLE IF NOT EXISTS `care_activity_mgr`.`medication` (
   PRIMARY KEY (`id`),
   INDEX `fk_med` (`patient_id` ASC))
 ENGINE = InnoDB
+AUTO_INCREMENT = 2
 DEFAULT CHARACTER SET = latin1;
 
 
@@ -82,7 +85,7 @@ DEFAULT CHARACTER SET = latin1;
 -- Table `care_activity_mgr`.`routines`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `care_activity_mgr`.`routines` (
-  `id` INT(11) UNSIGNED NOT NULL,
+  `id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
   `adate` DATE NOT NULL,
   `description` VARCHAR(140) NULL DEFAULT NULL,
   `start_time` VARCHAR(10) NOT NULL,
@@ -94,6 +97,7 @@ CREATE TABLE IF NOT EXISTS `care_activity_mgr`.`routines` (
   PRIMARY KEY (`id`),
   INDEX `fk_routines` (`patient_id` ASC))
 ENGINE = InnoDB
+AUTO_INCREMENT = 2
 DEFAULT CHARACTER SET = latin1;
 
 
@@ -111,10 +115,11 @@ CREATE TABLE IF NOT EXISTS `care_activity_mgr`.`users` (
   PRIMARY KEY (`id`),
   INDEX `fk_User` (`id` ASC))
 ENGINE = InnoDB
-AUTO_INCREMENT = 5
+AUTO_INCREMENT = 6
 DEFAULT CHARACTER SET = latin1;
 
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+

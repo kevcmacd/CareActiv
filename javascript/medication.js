@@ -1,6 +1,6 @@
 window.onload = function getMedication()
 {
-	var patient_id = 2000;
+	var patient_id = 1;
 	
 	var xmlhttp;
 	if (window.XMLHttpRequest)

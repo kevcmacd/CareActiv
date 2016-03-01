@@ -4,7 +4,6 @@ $username = "root";
 $password = "";
 $dbname = "care_activity_mgr";
 
-
 $aDate = $_GET['aDate'];
 $lDesc = $_GET['lDesc'];
 $sTime = $_GET['sTime'];
@@ -30,9 +29,9 @@ VALUES ('" . $aDate . "','"
 		. $eTime . "','" 
 		. $lCare . "','"
 		. $lIns . "','"
-		. $lRep . "','"
 		. $dRep . "','"
 		. $lMed . "','"
+		. $lRep . "','"
 		. $id . "')";
 
 if ($conn->query($sql) === TRUE) {

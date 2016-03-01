@@ -112,7 +112,7 @@ function insertRoutine()
 	var tIns = document.getElementById("tIns").value;
 	var rDate = document.getElementById("rDate").value;
 	var eTime = document.getElementById("eTime").value;
-	var id = 2000;
+	var id = 1;
 	
 	var xmlhttp;
 	if (window.XMLHttpRequest)
@@ -151,7 +151,7 @@ function insertAppointment()
 	var lDesc = document.getElementById("lDesc").value;
 	var sTime = document.getElementById("sTime").value;
 	var eTime = document.getElementById("eTime").value;
-	var id = 2000;
+	var id = 1;
 	
 	var xmlhttp;
 	if (window.XMLHttpRequest)
@@ -189,10 +189,10 @@ function insertMedication()
 	var eTime = document.getElementById("eTime").value;
 	var lCare = document.getElementById("lCare").value;
 	var lIns = document.getElementById("lIns").value;
-	var lRep = document.getElementById("lRep").value;
+	var lRep = $(".mySelect option:selected").val()
 	var dRep = document.getElementById("dRep").value;
 	var lMed = document.getElementById("lMed").value;
-	var id = 2000;
+	var id = 1;
 	
 	var xmlhttp;
 	if (window.XMLHttpRequest)
@@ -210,7 +210,7 @@ function insertMedication()
 			document.getElementById("medDiv").innerHTML=xmlhttp.responseText;
 		}
 	}
-	xmlhttp.open("GET","php/insertappointment.php?id=" + id
+	xmlhttp.open("GET","php/insertmedication.php?id=" + id
 										+ "&aDate=" + aDate
 										+ "&lDesc=" + lDesc
 										+ "&sTime=" + sTime
@@ -223,5 +223,4 @@ function insertMedication()
 	xmlhttp.send();
 	
 	//window.location.href = "medication.html";
-	
 }
