@@ -21,15 +21,13 @@
     // output data of each row
     while($row = $result->fetch_assoc()) {
         echo "<div id=\"" 
-		. $row["id"]. "\" style=\"background-color:white;width:97%;text-align:left;\">start date: " 
-		. $row["adate"]. " - description: " 
-		. $row["description"]. " " 
-		. $row["start_time"]. " " 
-		. $row["end_time"]. " " 
-		. $row["special_care"]. " " 
-		. $row["instructions"].  " "
-		. $row["medication_interval"].  " "
-		. $row["repeating"]. "<button data-role=\"button\" data-icon=\"delete\" data-inline=\"true\" data-mini=\"true\">Delete</button></div><br>";
+		. $row["id"]. "\" style=\"background-color:white;width:97%;text-align:left;\">" 
+		. $row["adate"]. " - MEDICATION: " 
+		. $row["description"]. " STARTS AT: " 
+		. $row["start_time"]. " ENDS AT: " 
+		. $row["end_time"]. " SPECIAL CARE: " 
+		. $row["special_care"]. " INSTRUCTIONS: " 
+		. $row["instructions"]. "<button data-role=\"button\" data-icon=\"delete\" data-inline=\"true\" data-mini=\"true\">Delete</button></div><br>";
     }
 	} else {
 		echo "0 medication routines";

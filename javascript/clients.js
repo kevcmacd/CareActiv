@@ -1,6 +1,6 @@
 window.onload = function getClients()
 {
-	var id = 5;
+	var id = 6;
 	
 	var xmlhttp;
 	if (window.XMLHttpRequest)
