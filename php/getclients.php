@@ -1,4 +1,5 @@
 <?php
+	
     $servername = "localhost";
 	$username = "root";
 	$password = "";
@@ -29,4 +30,5 @@
 		echo "0 clients";
 	}
    $conn->close();
+   
 ?>

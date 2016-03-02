@@ -8,7 +8,6 @@
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 	<script type="text/javascript" src="javascript/init.js"></script>
-    <script type="text/javascript" src="javascript/clients.js"></script>
     <title>CareActiv</title>
   </head>
   <body>
@@ -23,5 +22,13 @@
 	  </div>
       <a href="newclient.html" data-role="button">New Patient</a></div>
     </div>
+	<script>
+		window.onload = function getClients(){
+		var id = 6;
+		$.get( "php/getclients.php?id=" + id )
+		.done(function( data ) {
+		document.getElementById("cList").innerHTML = data;
+		});};
+	</script>
   </body>
 </html>

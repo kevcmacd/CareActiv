@@ -49,5 +49,13 @@
         </form>
       </div>
     </div>
+	<script>
+		window.onload = function getUserInfo(){
+		var id = 6;
+		$.get( "php/getuserinfo.php?id=" + patient_id )
+		.done(function( data ) {
+		document.getElementById("userInfo").innerHTML = data;
+		});};
+	</script>
   </body>
 </html>

@@ -7,8 +7,6 @@
 	<link rel="stylesheet" href="http://demos.jquerymobile.com/1.4.0/theme-classic/theme-classic.css" />
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-	<script type="text/javascript" src="javascript/init.js"></script>
-    <script type="text/javascript" src="javascript/medication.js"></script>
     <title>CareActiv</title>
   </head>
   <body>
@@ -37,5 +35,13 @@
 	  <a href="newmedication.html" data-icon="plus" data-role="button">New Medication</a>
       </div>
     </div>
+	<script>
+		window.onload = function getMedication(){
+		var patient_id = 1;
+		$.get( "php/getmedication.php?id=" + patient_id )
+		.done(function( data ) {
+		document.getElementById("medicationList").innerHTML = data;
+		});};
+	</script>
   </body>
 </html>

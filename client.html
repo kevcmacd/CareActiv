@@ -8,7 +8,7 @@
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 	<script type="text/javascript" src="javascript/init.js"></script>
-    <script type="text/javascript" src="javascript/activities.js"></script>
+    <!-- <script type="text/javascript" src="javascript/activities.js"></script> -->
     <title>CareActiv</title>
   </head>
   <body>
@@ -39,5 +39,33 @@
 	  <a href="clientprofile.html" data-role="button" class="ui-btn ui-icon-info ui-btn-icon-left">Profile</a>
 	  </div>
     </div>
+	<script>
+		window.onload = function getActivities(){
+			var patient_id = 1;
+			getAppointments(patient_id);
+			getMedication(patient_id);
+			getRoutines(patient_id);
+		};
+		
+		function getAppointments(id){
+		$.get( "php/getappointments.php?id=" + id )
+		.done(function( data ) {
+		document.getElementById("appointmentList").innerHTML = data;
+		});};
+		
+		function getMedication(id){
+		var patient_id = 1;
+		$.get( "php/getmedication.php?id=" + id )
+		.done(function( data ) {
+		document.getElementById("medicationList").innerHTML = data;
+		});};
+		
+		function getRoutines(id){
+		var patient_id = 1;
+		$.get( "php/getroutines.php?id=" + id )
+		.done(function( data ) {
+		document.getElementById("routineList").innerHTML = data;
+		});};
+	</script>
   </body>
 </html>

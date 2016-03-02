@@ -8,7 +8,6 @@
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 	<script type="text/javascript" src="javascript/init.js"></script>
-    <script type="text/javascript" src="javascript/routines.js"></script>
     <title>CareActiv</title>
   </head>
   <body>
@@ -35,5 +34,13 @@
         <a href="newroutine.html" data-icon="plus" data-role="button">New Routine</a>
       </div>
     </div>
+	<script>
+		window.onload = function getRoutines(){
+		var patient_id = 1;
+		$.get( "php/getroutines.php?id=" + patient_id )
+		.done(function( data ) {
+		document.getElementById("routineList").innerHTML = data;
+		});};
+	</script>
   </body>
 </html>
