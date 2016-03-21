@@ -21,11 +21,11 @@
     // output data of each row
     while($row = $result->fetch_assoc()) {
         echo "<div id=\"" 
-		. $row["id"]. "\" style=\"background-color:white;width:97%;text-align:left;\">" 
-		. $row["adate"]. " - APPOINTMENT: " 
-		. $row["description"]. " STARTS AT: " 
-		. $row["start_time"]. " ENDS AT: " 
-		. $row["end_time"]. " LOCATION: " 
+		. $row["id"]. "\" style=\"background-color:#ccffff;width:97%;text-align:left;\"><img src=\"images/appointment.png\"style=\"width:30px;height:30px;\">"
+		. $row["adate"]. " - <b>APPOINTMENT:</b> " 
+		. $row["description"]. " <b>STARTS AT:</b> " 
+		. $row["start_time"]. " <b>ENDS AT:</b> " 
+		. $row["end_time"]. " <b>LOCATION:</b> " 
 		. $row["location"]. "<button data-role=\"button\" data-icon=\"delete\" data-inline=\"true\" data-mini=\"true\">Delete</button></div><br>";
     }
 	} else {
