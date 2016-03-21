@@ -21,13 +21,13 @@
     // output data of each row
     while($row = $result->fetch_assoc()) {
         echo "<div id=\"" 
-		. $row["id"]. "\" style=\"background-color:#ccffcc;width:97%;text-align:left;\"><img src=\"images/physicalactivity.png\"style=\"width:30px;height:30px;\">"
-		. $row["adate"]. " - <b>ROUTINE:</b> " 
-		. $row["description"]. " <b>STARTS AT:</b> " 
-		. $row["start_time"]. " <b>ENDS AT:</b> " 
-		. $row["end_time"]. " <b>SPECIAL CARE:</b> " 
-		. $row["special_care"]. " <b>INSTRUCTIONS:</b> " 
-		. $row["instructions"].  "<button data-role=\"button\" data-icon=\"delete\" data-inline=\"true\" data-mini=\"true\">Delete</button></div><br>";
+		. $row["id"]. "\" style=\"background-color:#ccffcc;width:97%;text-align:left;\"><img src=\"images/physicalactivity.png\"style=\"width:30px;height:30px;\"><input type=\"checkbox\"><br>" 
+		. $row["adate"]. " - <br><b>ROUTINE:</b> " 
+		. $row["description"]. " <br><b>STARTS AT:</b> " 
+		. $row["start_time"]. " <br><b>ENDS AT:</b> " 
+		. $row["end_time"]. " <br><b>SPECIAL CARE:</b> " 
+		. $row["special_care"]. " <br><b>INSTRUCTIONS:</b> " 
+		. $row["instructions"].  "</div><br>";
     }
 	} else {
 		echo "0 routines";
