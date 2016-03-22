@@ -14,7 +14,7 @@
     <div data-role="page" data-theme="b">
       <div data-role="header" data-position="inline">
       <h1>Routines</h1>
-      <a href="client.html" class="ui-btn ui-icon-arrow-l ui-btn-icon-left">Back</a> 
+      <a href="client.html"  class="ui-btn ui-icon-arrow-l ui-btn-icon-left"  >Back</a> 
       <a href="index.html" class="ui-btn-right">Log Out</a></div>
       <div id="logo" align="center">
         <br />
@@ -25,15 +25,18 @@
           <div id="routineList" align="center">
           </div>
         </form>
-        <a href="newroutine.html" data-icon="plus" data-role="button">New Routine</a>
+		<a onclick="reload()" data-role="button">Show Routines</a>
+        <a href="newroutine.html"  data-icon="plus" data-role="button">New Routine</a>
       </div>
     </div>
 	<script>
+	    
 		window.onload = function getRoutines(){
 		var patient_id = 1;
 		$.get( "php/getroutines.php?id=" + patient_id )
 		.done(function( data ) {
 		document.getElementById("routineList").innerHTML = data;
+		
 		});};
 	</script>
   </body>
