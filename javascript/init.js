@@ -224,3 +224,8 @@ function insertMedication()
 	
 	//window.location.href = "medication.html";
 }
+
+function reload() 
+{
+    location.reload();
+}
