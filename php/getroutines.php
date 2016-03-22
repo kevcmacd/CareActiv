@@ -21,13 +21,13 @@
     // output data of each row
     while($row = $result->fetch_assoc()) {
         echo "<div id=\"" 
-		. $row["id"]. "\" style=\"background-color:#ccffcc;width:97%;text-align:left;\"><img src=\"images/physicalactivity.png\"style=\"width:30px;height:30px;\"><input type=\"checkbox\"><br>" 
-		. $row["adate"]. " - <br><b>ROUTINE:</b> " 
+		. $row["id"]. "\" style=\"background-color:white;width:97%;text-align:left;border:2px solid black;\"><img src=\"images/physicalactivity.png\"style=\"width:30px;height:30px;\"><br>" 
+		. $row["adate"]. "<br><b>ROUTINE:</b> " 
 		. $row["description"]. " <br><b>STARTS AT:</b> " 
 		. $row["start_time"]. " <br><b>ENDS AT:</b> " 
 		. $row["end_time"]. " <br><b>SPECIAL CARE:</b> " 
 		. $row["special_care"]. " <br><b>INSTRUCTIONS:</b> " 
-		. $row["instructions"].  "</div><br>";
+		. $row["instructions"].  "<br><input type=\"checkbox\">Mark as done</div><br>";
     }
 	} else {
 		echo "0 routines";
