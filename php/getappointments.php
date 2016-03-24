@@ -26,7 +26,13 @@
 		. $row["description"]. " <br><b>STARTS AT:</b> " 
 		. $row["start_time"]. " <br><b>ENDS AT:</b> " 
 		. $row["end_time"]. " <br><b>LOCATION:</b> " 
-		. $row["location"]. "<br><input type=\"checkbox\">Mark as done</div><br>";
+		. $row["location"]. "<br><b>COMPLETED:</b>"
+		. $row["completed"]. "<br><b>DETAILS:</b>"
+		. $row["details"]. "<br><input id=\"cb" . $row["id"]. "\"type=\"checkbox\" onclick=\"doneApp(" . $row["id"] . ")\">Mark as done</div>
+								  <div id=\"app\" style=\"display: none;\">Completion details:<br>
+								  <textarea rows=\"4\" cols=\"50\" style=\"width:97%;\"></textarea><br>
+								  <button onclick=\"#\">Save and Update</a>
+								  </div><br>";
     }
 	} else {
 		echo "0 appointments";

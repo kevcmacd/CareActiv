@@ -229,3 +229,36 @@ function reload()
 {
     location.reload();
 }
+
+function doneApp(val){
+	if ($( "#app" ).is(":visible"))
+	{
+		$( "#app" ).hide();
+	}
+	else
+	{
+		$( "#app" ).show();
+	}
+}
+
+function doneMed(val){
+	if ($( "#med" ).is(":visible"))
+	{
+		$( "#med" ).hide();
+	}
+	else
+	{
+		$( "#med" ).show();
+	}
+}
+
+function doneRoutine(val){
+	if ($( "#rou" ).is(":visible"))
+	{
+		$( "#rou" ).hide();
+	}
+	else
+	{
+		$( "#rou" ).show();
+	}
+}

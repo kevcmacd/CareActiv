@@ -28,6 +28,8 @@ CREATE TABLE IF NOT EXISTS `care_activity_mgr`.`appointments` (
   `location` VARCHAR(45) NOT NULL,
   `patient_id` INT(11) UNSIGNED NOT NULL,
   `description` VARCHAR(140) NULL DEFAULT NULL,
+  `completed` BIT(1) NULL DEFAULT b'0',
+  `details` VARCHAR(140) NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_apps` (`patient_id` ASC))
 ENGINE = InnoDB
@@ -74,6 +76,8 @@ CREATE TABLE IF NOT EXISTS `care_activity_mgr`.`medication` (
   `medication_interval` VARCHAR(45) NOT NULL,
   `repeating` INT(11) NULL DEFAULT NULL,
   `patient_id` INT(11) UNSIGNED NOT NULL,
+  `completed` BIT(1) NULL DEFAULT b'0',
+  `details` VARCHAR(140) NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_med` (`patient_id` ASC))
 ENGINE = InnoDB
@@ -94,6 +98,8 @@ CREATE TABLE IF NOT EXISTS `care_activity_mgr`.`routines` (
   `instructions` VARCHAR(140) NULL DEFAULT NULL,
   `repeating` VARCHAR(140) NULL DEFAULT NULL,
   `patient_id` INT(11) UNSIGNED NOT NULL,
+  `completed` BIT(1) NULL DEFAULT b'0',
+  `details` VARCHAR(140) NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_routines` (`patient_id` ASC))
 ENGINE = InnoDB
@@ -115,11 +121,10 @@ CREATE TABLE IF NOT EXISTS `care_activity_mgr`.`users` (
   PRIMARY KEY (`id`),
   INDEX `fk_User` (`id` ASC))
 ENGINE = InnoDB
-AUTO_INCREMENT = 6
+AUTO_INCREMENT = 2
 DEFAULT CHARACTER SET = latin1;
 
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
-
