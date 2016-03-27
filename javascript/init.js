@@ -272,6 +272,7 @@ function updateRoutine(val)
 	if (xmlhttp.readyState==4 && xmlhttp.status==200)
 		{
 			document.getElementById("updateDiv").innerHTML=xmlhttp.responseText;
+			reload();
 		}
 	}
 	xmlhttp.open("GET","php/updateroutine.php?id=" + routineid
@@ -298,6 +299,7 @@ function updateAppointment(val)
 	if (xmlhttp.readyState==4 && xmlhttp.status==200)
 		{
 			document.getElementById("updateDiv").innerHTML=xmlhttp.responseText;
+			reload();
 		}
 	}
 	xmlhttp.open("GET","php/updateappointment.php?id=" + appointmentid
@@ -324,6 +326,7 @@ function updateMedication(val)
 	if (xmlhttp.readyState==4 && xmlhttp.status==200)
 		{
 			document.getElementById("updateDiv").innerHTML=xmlhttp.responseText;
+			reload();
 		}
 	}
 	xmlhttp.open("GET","php/updatemedication.php?id=" + medicationid
