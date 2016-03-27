@@ -220,36 +220,36 @@ function reload()
     location.reload();
 }
 
-function doneApp(){
-	if ($( "#app" ).is(":visible"))
+function doneApp(val){
+	if ($( "#app" + val).is(":visible"))
 	{
-		$( "#app" ).hide();
+		$( "#app" + val).hide();
 	}
 	else
 	{
-		$( "#app" ).show();
+		$( "#app" + val).show();
 	}
 }
 
-function doneMed(){
-	if ($( "#med" ).is(":visible"))
+function doneMed(val){
+	if ($( "#med" + val).is(":visible"))
 	{
-		$( "#med" ).hide();
+		$( "#med" + val).hide();
 	}
 	else
 	{
-		$( "#med" ).show();
+		$( "#med" + val).show();
 	}
 }
 
-function doneRoutine(){
-	if ($( "#rou" ).is(":visible"))
+function doneRoutine(val){
+	if ($( "#rou" + val).is(":visible"))
 	{
-		$( "#rou" ).hide();
+		$( "#rou" + val).hide();
 	}
 	else
 	{
-		$( "#rou" ).show();
+		$( "#rou" + val).show();
 	}
 }
 
