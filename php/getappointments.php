@@ -28,10 +28,10 @@
 		. $row["end_time"]. " <br><b>LOCATION:</b> " 
 		. $row["location"]. "<br><b>COMPLETED:</b>"
 		. $row["completed"]. "<br><b>DETAILS:</b>"
-		. $row["details"]. "<br><input id=\"cb" . $row["id"]. "\"type=\"checkbox\" onclick=\"doneApp(" . $row["id"] . ")\">Mark as done</div>
+		. $row["details"]. "<br><input type=\"checkbox\" onclick=\"doneApp()\">Mark as done</div>
 								  <div id=\"app\" style=\"display: none;\">Completion details:<br>
-								  <textarea rows=\"4\" cols=\"50\" style=\"width:97%;\"></textarea><br>
-								  <button onclick=\"#\">Save and Update</a>
+								  <textarea id=\"at" . $row["id"]. "\" rows=\"4\" cols=\"50\" style=\"width:97%;\"></textarea><br>
+								  <button onclick=\"updateAppointment(". $row["id"].")\">Save and Update</a>
 								  </div><br>";
     }
 	} else {

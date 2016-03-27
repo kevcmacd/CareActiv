@@ -99,8 +99,6 @@ function insertClient()
 										+ "&emp=" + emp
 										+ "&id=" + id,true);
 	xmlhttp.send();
-	
-	//window.location.href = "clientsel.html";
 }
 
 function insertRoutine()
@@ -139,9 +137,6 @@ function insertRoutine()
 										+ "&rDate=" + rDate
 										+ "&eTime=" + eTime,true);
 	xmlhttp.send();
-	
-	//window.location.href = "routines.html";
-	
 }
 
 function insertAppointment()
@@ -176,9 +171,6 @@ function insertAppointment()
 										+ "&sTime=" + sTime
 										+ "&eTime=" + eTime,true);
 	xmlhttp.send();
-	
-	//window.location.href = "appointments.html";
-	
 }
 
 function insertMedication()
@@ -221,8 +213,6 @@ function insertMedication()
 										+ "&dRep=" + dRep
 										+ "&lMed=" + lMed,true);
 	xmlhttp.send();
-	
-	//window.location.href = "medication.html";
 }
 
 function reload() 
@@ -230,7 +220,7 @@ function reload()
     location.reload();
 }
 
-function doneApp(val){
+function doneApp(){
 	if ($( "#app" ).is(":visible"))
 	{
 		$( "#app" ).hide();
@@ -241,7 +231,7 @@ function doneApp(val){
 	}
 }
 
-function doneMed(val){
+function doneMed(){
 	if ($( "#med" ).is(":visible"))
 	{
 		$( "#med" ).hide();
@@ -252,7 +242,7 @@ function doneMed(val){
 	}
 }
 
-function doneRoutine(val){
+function doneRoutine(){
 	if ($( "#rou" ).is(":visible"))
 	{
 		$( "#rou" ).hide();
@@ -261,4 +251,82 @@ function doneRoutine(val){
 	{
 		$( "#rou" ).show();
 	}
+}
+
+function updateRoutine(val)
+{
+	var routineid = val;
+	var details = document.getElementById("rt" + val).value;
+	
+	var xmlhttp;
+	if (window.XMLHttpRequest)
+	{// code for IE7+, Firefox, Chrome, Opera, Safari
+	xmlhttp=new XMLHttpRequest();
+	}
+	else
+	{// code for IE6, IE5
+	xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	xmlhttp.onreadystatechange=function()
+	{
+	if (xmlhttp.readyState==4 && xmlhttp.status==200)
+		{
+			document.getElementById("updateDiv").innerHTML=xmlhttp.responseText;
+		}
+	}
+	xmlhttp.open("GET","php/updateroutine.php?id=" + routineid
+										+ "&details=" + details,true);
+	xmlhttp.send();
+}
+
+function updateAppointment(val)
+{
+	var appointmentid = val;
+	var details = document.getElementById("at" + val).value;
+	
+	var xmlhttp;
+	if (window.XMLHttpRequest)
+	{// code for IE7+, Firefox, Chrome, Opera, Safari
+	xmlhttp=new XMLHttpRequest();
+	}
+	else
+	{// code for IE6, IE5
+	xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	xmlhttp.onreadystatechange=function()
+	{
+	if (xmlhttp.readyState==4 && xmlhttp.status==200)
+		{
+			document.getElementById("updateDiv").innerHTML=xmlhttp.responseText;
+		}
+	}
+	xmlhttp.open("GET","php/updateappointment.php?id=" + appointmentid
+										+ "&details=" + details,true);
+	xmlhttp.send();
+}
+
+function updateMedication(val)
+{
+	var medicationid = val;
+	var details = document.getElementById("mt" + val).value;
+	
+	var xmlhttp;
+	if (window.XMLHttpRequest)
+	{// code for IE7+, Firefox, Chrome, Opera, Safari
+	xmlhttp=new XMLHttpRequest();
+	}
+	else
+	{// code for IE6, IE5
+	xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	xmlhttp.onreadystatechange=function()
+	{
+	if (xmlhttp.readyState==4 && xmlhttp.status==200)
+		{
+			document.getElementById("updateDiv").innerHTML=xmlhttp.responseText;
+		}
+	}
+	xmlhttp.open("GET","php/updatemedication.php?id=" + medicationid
+										+ "&details=" + details,true);
+	xmlhttp.send();
 }

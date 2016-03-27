@@ -29,10 +29,10 @@
 		. $row["special_care"]. " <br><b>INSTRUCTIONS:</b> " 
 		. $row["instructions"]. "<br><b>COMPLETED:</b>"
 		. $row["completed"]. "<br><b>DETAILS:</b>"
-		. $row["details"]. "<br><input id=\"cb" . $row["id"]. "\"type=\"checkbox\" onclick=\"doneMed(" . $row["id"] . ")\">Mark as done</div>
+		. $row["details"]. "<br><input type=\"checkbox\" onclick=\"doneMed()\">Mark as done</div>
 								  <div id=\"med\" style=\"display: none;\">Completion details:<br>
-								  <textarea rows=\"4\" cols=\"50\" style=\"width:97%;\"></textarea><br>
-								  <button onclick=\"#\">Save and Update</a>
+								  <textarea id=\"mt" . $row["id"]. "\" rows=\"4\" cols=\"50\" style=\"width:97%;\"></textarea><br>
+								  <button onclick=\"updateMedication(". $row["id"].")\">Save and Update</a>
 								  </div><br>";
     }
 	} else {
