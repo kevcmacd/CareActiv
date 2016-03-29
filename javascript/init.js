@@ -29,30 +29,36 @@ function insertUser()
 	var squest = document.getElementById("squest").value;
 	var sans = document.getElementById("sans").value;
 	
-	var xmlhttp;
-	if (window.XMLHttpRequest)
-	{// code for IE7+, Firefox, Chrome, Opera, Safari
-	xmlhttp=new XMLHttpRequest();
-	}
-	else
-	{// code for IE6, IE5
-	xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-	}
-	xmlhttp.onreadystatechange=function()
+	if ((fName == "") || (lName == "") || (uName == "") || (pass == "") || (squest == "") || (sans == ""))
 	{
-	if (xmlhttp.readyState==4 && xmlhttp.status==200)
-		{
-			document.getElementById("userDiv").innerHTML=xmlhttp.responseText;
+		document.getElementById("userDiv").innerHTML= "Please fill out all fields";
+	} 
+	else
+	{
+		var xmlhttp;
+		if (window.XMLHttpRequest)
+		{// code for IE7+, Firefox, Chrome, Opera, Safari
+		xmlhttp=new XMLHttpRequest();
 		}
+		else
+		{// code for IE6, IE5
+		xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		xmlhttp.onreadystatechange=function()
+		{
+		if (xmlhttp.readyState==4 && xmlhttp.status==200)
+			{
+				document.getElementById("userDiv").innerHTML=xmlhttp.responseText;
+			}
+		}
+		xmlhttp.open("GET","php/insertuser.php?fName=" + fName
+											+ "&lName=" + lName
+											+ "&uName=" + uName
+											+ "&pass=" + pass
+											+ "&squest=" + squest
+											+ "&sans=" + sans,true);
+		xmlhttp.send();
 	}
-	xmlhttp.open("GET","php/insertuser.php?fName=" + fName
-										+ "&lName=" + lName
-										+ "&uName=" + uName
-										+ "&pass=" + pass
-										+ "&squest=" + squest
-										+ "&sans=" + sans,true);
-	xmlhttp.send();
-	
 }
 
 function insertClient()
@@ -70,35 +76,42 @@ function insertClient()
 	var emp = document.getElementById("emp").value;
 	var id = 6;
 	
-	var xmlhttp;
-	if (window.XMLHttpRequest)
-	{// code for IE7+, Firefox, Chrome, Opera, Safari
-	xmlhttp=new XMLHttpRequest();
-	}
-	else
-	{// code for IE6, IE5
-	xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-	}
-	xmlhttp.onreadystatechange=function()
+	if ((fName == "") || (lName == "") || (dob == "") || (sex == "") || (loc == "") || (allg == "") || (cond == "") || (pcp == "") || (emc == "") || (emp == "") )
 	{
-	if (xmlhttp.readyState==4 && xmlhttp.status==200)
-		{
-			document.getElementById("clientDiv").innerHTML=xmlhttp.responseText;
+		document.getElementById("clientDiv").innerHTML= "Please fill out all fields";
+	} 
+	else
+	{
+		var xmlhttp;
+		if (window.XMLHttpRequest)
+		{// code for IE7+, Firefox, Chrome, Opera, Safari
+		xmlhttp=new XMLHttpRequest();
 		}
+		else
+		{// code for IE6, IE5
+		xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		xmlhttp.onreadystatechange=function()
+		{
+		if (xmlhttp.readyState==4 && xmlhttp.status==200)
+			{
+				document.getElementById("clientDiv").innerHTML=xmlhttp.responseText;
+			}
+		}
+		xmlhttp.open("GET","php/insertclient.php?fName=" + fName
+											+ "&lName=" + lName
+											+ "&dob=" + dob
+											+ "&sex=" + sex
+											+ "&loc=" + loc
+											+ "&toc=" + toc
+											+ "&allg=" + allg
+											+ "&cond=" + cond
+											+ "&pcp=" + pcp
+											+ "&emc=" + emc
+											+ "&emp=" + emp
+											+ "&id=" + id,true);
+		xmlhttp.send();
 	}
-	xmlhttp.open("GET","php/insertclient.php?fName=" + fName
-										+ "&lName=" + lName
-										+ "&dob=" + dob
-										+ "&sex=" + sex
-										+ "&loc=" + loc
-										+ "&toc=" + toc
-										+ "&allg=" + allg
-										+ "&cond=" + cond
-										+ "&pcp=" + pcp
-										+ "&emc=" + emc
-										+ "&emp=" + emp
-										+ "&id=" + id,true);
-	xmlhttp.send();
 }
 
 function insertRoutine()
@@ -112,31 +125,38 @@ function insertRoutine()
 	var eTime = document.getElementById("eTime").value;
 	var id = 1;
 	
-	var xmlhttp;
-	if (window.XMLHttpRequest)
-	{// code for IE7+, Firefox, Chrome, Opera, Safari
-	xmlhttp=new XMLHttpRequest();
+	if ((sDate == "") || (tDesc == "") || (sTime == "") || (tCare == "") || (tIns == "") || (rDate == "") || (eTime == ""))
+	{
+		document.getElementById("routineDiv").innerHTML="Please fill out all fields";
 	}
 	else
-	{// code for IE6, IE5
-	xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-	}
-	xmlhttp.onreadystatechange=function()
 	{
-	if (xmlhttp.readyState==4 && xmlhttp.status==200)
-		{
-			document.getElementById("routineDiv").innerHTML=xmlhttp.responseText;
+		var xmlhttp;
+		if (window.XMLHttpRequest)
+		{// code for IE7+, Firefox, Chrome, Opera, Safari
+		xmlhttp=new XMLHttpRequest();
 		}
+		else
+		{// code for IE6, IE5
+		xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		xmlhttp.onreadystatechange=function()
+		{
+		if (xmlhttp.readyState==4 && xmlhttp.status==200)
+			{
+				document.getElementById("routineDiv").innerHTML=xmlhttp.responseText;
+			}
+		}
+		xmlhttp.open("GET","php/insertroutine.php?id=" + id
+											+ "&sDate=" + sDate
+											+ "&tDesc=" + tDesc
+											+ "&sTime=" + sTime
+											+ "&tCare=" + tCare
+											+ "&tIns=" + tIns
+											+ "&rDate=" + rDate
+											+ "&eTime=" + eTime,true);
+		xmlhttp.send();
 	}
-	xmlhttp.open("GET","php/insertroutine.php?id=" + id
-										+ "&sDate=" + sDate
-										+ "&tDesc=" + tDesc
-										+ "&sTime=" + sTime
-										+ "&tCare=" + tCare
-										+ "&tIns=" + tIns
-										+ "&rDate=" + rDate
-										+ "&eTime=" + eTime,true);
-	xmlhttp.send();
 }
 
 function insertAppointment()
@@ -148,29 +168,36 @@ function insertAppointment()
 	var eTime = document.getElementById("eTime").value;
 	var id = 1;
 	
-	var xmlhttp;
-	if (window.XMLHttpRequest)
-	{// code for IE7+, Firefox, Chrome, Opera, Safari
-	xmlhttp=new XMLHttpRequest();
+	if ((aDate == "") || (lLoc == "") || (lDesc == "") || (sTime == "") || (eTime == ""))
+	{
+		document.getElementById("appDiv").innerHTML="Please fill out all fields";
 	}
 	else
-	{// code for IE6, IE5
-	xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-	}
-	xmlhttp.onreadystatechange=function()
 	{
-	if (xmlhttp.readyState==4 && xmlhttp.status==200)
-		{
-			document.getElementById("appDiv").innerHTML=xmlhttp.responseText;
+		var xmlhttp;
+		if (window.XMLHttpRequest)
+		{// code for IE7+, Firefox, Chrome, Opera, Safari
+		xmlhttp=new XMLHttpRequest();
 		}
+		else
+		{// code for IE6, IE5
+		xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		xmlhttp.onreadystatechange=function()
+		{
+		if (xmlhttp.readyState==4 && xmlhttp.status==200)
+			{
+				document.getElementById("appDiv").innerHTML=xmlhttp.responseText;
+			}
+		}	
+		xmlhttp.open("GET","php/insertappointment.php?id=" + id
+											+ "&aDate=" + aDate
+											+ "&lLoc=" + lLoc
+											+ "&lDesc=" + lDesc
+											+ "&sTime=" + sTime
+											+ "&eTime=" + eTime,true);
+		xmlhttp.send();
 	}
-	xmlhttp.open("GET","php/insertappointment.php?id=" + id
-										+ "&aDate=" + aDate
-										+ "&lLoc=" + lLoc
-										+ "&lDesc=" + lDesc
-										+ "&sTime=" + sTime
-										+ "&eTime=" + eTime,true);
-	xmlhttp.send();
 }
 
 function insertMedication()
@@ -186,33 +213,40 @@ function insertMedication()
 	var lMed = document.getElementById("lMed").value;
 	var id = 1;
 	
-	var xmlhttp;
-	if (window.XMLHttpRequest)
-	{// code for IE7+, Firefox, Chrome, Opera, Safari
-	xmlhttp=new XMLHttpRequest();
+	if ((aDate == "") || (lDesc == "") || (sTime == "") || (lCare == "") || (lIns == "") || (dRep == "") || (lMed == ""))
+	{
+		document.getElementById("medDiv").innerHTML="Please fill out all fields";
 	}
 	else
-	{// code for IE6, IE5
-	xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-	}
-	xmlhttp.onreadystatechange=function()
 	{
-	if (xmlhttp.readyState==4 && xmlhttp.status==200)
-		{
-			document.getElementById("medDiv").innerHTML=xmlhttp.responseText;
+		var xmlhttp;
+		if (window.XMLHttpRequest)
+		{// code for IE7+, Firefox, Chrome, Opera, Safari
+		xmlhttp=new XMLHttpRequest();
 		}
+		else
+		{// code for IE6, IE5
+		xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		xmlhttp.onreadystatechange=function()
+		{
+		if (xmlhttp.readyState==4 && xmlhttp.status==200)
+			{
+				document.getElementById("medDiv").innerHTML=xmlhttp.responseText;
+			}
+		}
+		xmlhttp.open("GET","php/insertmedication.php?id=" + id
+											+ "&aDate=" + aDate
+											+ "&lDesc=" + lDesc
+											+ "&sTime=" + sTime
+											+ "&eTime=" + eTime
+											+ "&lCare=" + lCare
+											+ "&lIns=" + lIns
+											+ "&lRep=" + lRep
+											+ "&dRep=" + dRep
+											+ "&lMed=" + lMed,true);
+		xmlhttp.send();
 	}
-	xmlhttp.open("GET","php/insertmedication.php?id=" + id
-										+ "&aDate=" + aDate
-										+ "&lDesc=" + lDesc
-										+ "&sTime=" + sTime
-										+ "&eTime=" + eTime
-										+ "&lCare=" + lCare
-										+ "&lIns=" + lIns
-										+ "&lRep=" + lRep
-										+ "&dRep=" + dRep
-										+ "&lMed=" + lMed,true);
-	xmlhttp.send();
 }
 
 function reload() 
