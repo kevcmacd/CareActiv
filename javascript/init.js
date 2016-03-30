@@ -20,6 +20,21 @@ function checkmyconnect()
 	xmlhttp.send();
 }
 
+function login()
+{
+	var name = document.getElementById("username").value;
+	var pword = document.getElementById("pword").value;
+	
+	if ((name == "") || (pword == ""))
+	{
+		document.getElementById("loginDiv").innerHTML= "Login error. Please enter username and password.";
+	} 
+	else
+	{
+		window.location.href = "clientsel.html";
+	}
+}
+
 function insertUser()
 {
 	var fName = document.getElementById("fName").value;
